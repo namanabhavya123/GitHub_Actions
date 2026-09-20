@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Always runs job
         run: echo "This is Always Runs Job"
+  
   condition_job:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/head/main'
