@@ -1,0 +1,17 @@
+name: Multi jobs YAML file
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  always_runs:
+    runs-on: uduntu-latest
+    steps:
+      - name: Always runs job
+        run: echo "This is Always Runs Job"
+  condition_job:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/head/main'
+    steps:
+      - name: conition Job for main branch
+        run: echo "This is condition jon for main branch"
