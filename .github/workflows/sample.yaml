@@ -1,0 +1,10 @@
+name: sample YAML file
+
+on: push
+
+jobs:
+  samplejob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello, from github actions"
